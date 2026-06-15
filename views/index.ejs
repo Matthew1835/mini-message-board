@@ -1,0 +1,12 @@
+<% messages.forEach((message, index) => { %>
+    <div>
+        <h3><%= message.user %></h3>
+
+        <p><%= message.text %></p>
+
+        <small><%= message.added %></small>
+
+        <a href="/message/<%= index %>">Open</a>
+    </div>
+    <hr>
+<% }) %>
