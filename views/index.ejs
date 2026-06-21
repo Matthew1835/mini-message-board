@@ -1,12 +1,25 @@
-<% messages.forEach((message, index) => { %>
-    <div>
-        <h3><%= message.user %></h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
 
-        <p><%= message.text %></p>
-
-        <small><%= message.added %></small>
-
-        <a href="/message/<%= index %>">Open</a>
-    </div>
+    <a href="/new">Create Message</a>
     <hr>
-<% }) %>
+
+    <% messages.forEach(message => { %>
+
+        <div>
+            <h3><%= message.username %></h3>
+            <p><%= message.message %></p>
+            <a href="/message/<%= message.id %>">Details</a>
+        </div>
+        <hr>
+
+    <% }) %>
+</body>
+</html>

@@ -1,23 +1,17 @@
-<h1>Message Details</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
 
-<p>
-    <strong>User:</strong>
+    <p><strong>User:</strong><%= message.username %></p>
+    <p><strong>Message:</strong><%= message.message %></p>
+    <p><strong>Date:</strong><%= message.created_at %></p>
 
-    <%= message.user %>
-</p>
-
-<p>
-    <strong>Message:</strong>
-
-    <%= message.text %>
-</p>
-
-<p>
-    <strong>Date:</strong>
-
-    <%= message.added %>
-</p>
-
-<a href="/">
-    Back
-</a>
+    <a href="/">Back</a>
+</body>
+</html>
